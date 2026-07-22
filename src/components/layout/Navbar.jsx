@@ -1,32 +1,22 @@
 export default function Navbar() {
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50
-    w-[92%] max-w-6xl
-    rounded-full
-    border border-white/10
-    bg-white/5
-    backdrop-blur-xl">
+    <nav className="fixed top-10 left-1/2 z-50 w-[92%] max-w-7xl -translate-x-1/2">
 
-      <div className="flex items-center justify-between px-8 py-4">
+      <div className="flex items-center justify-between rounded-full border border-white/10 bg-white/5 px-10 py-5 backdrop-blur-xl">
 
-        <h1 className="text-cyan-400 font-bold text-2xl">
+        <h1 className="text-3xl font-bold text-cyan-400">
           Shruti
         </h1>
 
-        <div className="flex gap-8 text-gray-300">
-
-          <a href="#">About</a>
-
-          <a href="#">Projects</a>
-
-          <a href="#">Leadership</a>
-
-          <a href="#">Contact</a>
-
-        </div>
+        <ul className="flex gap-12 text-lg text-slate-300">
+          <li>About</li>
+          <li>Projects</li>
+          <li>Leadership</li>
+          <li>Contact</li>
+        </ul>
 
       </div>
 
     </nav>
-  )
+  );
 }
