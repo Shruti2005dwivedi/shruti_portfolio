@@ -5,6 +5,7 @@ import Skills from "./components/home/Skills";
 import Projects from "./components/home/Projects";
 import Leadership from "./components/home/Leadership";
 import BeyondTech from "./components/home/BeyondTech";
+import Contact from "./components/home/Contact";
 export default function App() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function App() {
       <Projects />
       <Leadership />
       <BeyondTech />
+      <Contact />
   </> 
   );    
 }
