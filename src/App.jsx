@@ -1,17 +1,23 @@
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/home/Hero";
-
-function App() {
+import About from "./components/home/About";
+import Skills from "./components/home/Skills";
+import Projects from "./components/home/Projects";
+import Leadership from "./components/home/Leadership";
+import BeyondTech from "./components/home/BeyondTech";
+export default function App() {
   return (
     <>
       <Navbar />
       <Hero />
-    </>
-  );
+      <About />
+      <Skills />
+      <Projects />
+      <Leadership />
+      <BeyondTech />
+  </> 
+  );    
 }
-
-export default App;
-
 
 
 
