@@ -1,14 +1,39 @@
 export default function BackgroundGlow() {
   return (
     <>
-      {/* Cyan Glow */}
-      <div className="absolute left-[-120px] top-[-80px] h-[380px] w-[380px] rounded-full bg-cyan-500/15 blur-[170px]" />
+      <div
+        className="
+          fixed
+          -top-56
+          -left-52
+          h-[520px]
+          w-[520px]
+          rounded-full
+          blur-[180px]
+          opacity-15
+          pointer-events-none
+        "
+        style={{
+          background: "#5A4331",
+        }}
+      />
 
-      {/* Purple Glow */}
-      <div className="absolute right-[-120px] top-[120px] h-[350px] w-[350px] rounded-full bg-violet-500/15 blur-[180px]" />
-
-      {/* Bottom Blue Glow */}
-      <div className="absolute bottom-[-180px] left-1/2 h-[450px] w-[450px] -translate-x-1/2 rounded-full bg-blue-500/8 blur-[220px]" />
+      <div
+        className="
+          fixed
+          bottom-0
+          right-0
+          h-[460px]
+          w-[460px]
+          rounded-full
+          blur-[180px]
+          opacity-15
+          pointer-events-none
+        "
+        style={{
+          background: "#8B6B4A",
+        }}
+      />
     </>
   );
 }

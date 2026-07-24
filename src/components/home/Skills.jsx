@@ -46,9 +46,9 @@ const categories = [
 export default function Skills() {
   return (
     <section
-      id="skills"
-      className="mx-auto max-w-7xl px-8 py-32"
-    >
+  id="skills"
+  className="relative py-32 px-8"
+>
       <div className="mb-20 text-center">
 
         <p className="uppercase tracking-[0.4em] text-cyan-400">

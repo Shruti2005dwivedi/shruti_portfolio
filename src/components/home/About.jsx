@@ -1,74 +1,92 @@
 import { motion } from "framer-motion";
-import StatCard from "../ui/StatCard";
 
 export default function About() {
   return (
     <section
       id="about"
-      className="mx-auto max-w-7xl px-8 py-32"
+      className="mx-auto max-w-7xl px-8 py-14 md:px-20 md:py-16"
     >
-      <div className="mb-20 text-center">
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-4 font-mono text-sm uppercase tracking-[0.35em] text-[#B88952]"
+      >
+        JOURNAL ENTRY 01
+      </motion.p>
 
-  <p className="mb-3 uppercase tracking-[0.4em] text-cyan-400">
-    WHO AM I
-  </p>
+      <div className="grid gap-20 lg:grid-cols-[1.2fr_0.8fr]">
+        {/* LEFT */}
 
-  <h2 className="text-5xl font-black text-white">
-    About Me
-  </h2>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-5xl font-black leading-tight text-[#F2E9DA]">
+            Why I Build???
+          </h2>
 
-  <div className="mx-auto mt-6 h-1 w-28 rounded-full bg-cyan-400"></div>
+          <div className="mt-12 space-y-8 text-lg leading-9 text-[#B9AC9A]">
+            <p>
+              I don't build projects just to fill a portfolio. Most ideas begin
+              with a question that refuses to leave me alone.
+            </p>
 
-</div>
+            <p>
+              <span className="font-semibold text-[#F2E9DA]">
+                "What if technology could solve this?"
+              </span>{" "}
+              is usually where everything starts. That question leads to
+              research papers, whiteboards full of architecture diagrams,
+              broken prototypes, late-night debugging sessions and countless
+              iterations until the idea finally begins to make sense.
+            </p>
 
-      <div className="grid items-center gap-16 lg:grid-cols-2">
-
-        {/* Left */}
-
-        <div>
-          <div className="h-[430px] rounded-3xl border border-cyan-400/20 bg-gradient-to-br from-cyan-500/10 to-violet-500/10 backdrop-blur-xl flex items-center justify-center">
-
-            <div className="text-center">
-
-  <div className="mx-auto flex h-32 w-32 items-center justify-center rounded-full border border-cyan-400/40 bg-cyan-400/10 text-5xl">
-    👩🏻‍💻
-  </div>
-
-  <p className="mt-6 text-slate-500">
-    Professional Photo Coming Soon
-  </p>
-
-</div>
+            <p>
+              Whether it's Artificial Intelligence, Blockchain, Computer Vision
+              or Cybersecurity, I'm more interested in understanding{" "}
+              <span className="text-white">why something works</span> than
+              simply making it work.
+            </p>
 
           </div>
-        </div>
+        </motion.div>
 
-        {/* Right */}
+        {/* RIGHT */}
 
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
+          className="space-y-6"
         >
-          <h3 className="text-4xl font-bold text-white">
-            AI Engineer & Builder
-          </h3>
+          <div className="rounded-3xl border border-[#3A3028] bg-[#241E18]/70 p-8 backdrop-blur">
+            <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#B88952]">
+              CURRENT NOTE
+            </p>
 
-          <p className="mt-8 text-lg leading-9 text-slate-400">
-            I'm an <span className="text-cyan-400 font-semibold">AI & Data Science</span> undergraduate passionate about building <span className="text-cyan-400 font-semibold">intelligent software</span>, <span className="text-cyan-400 font-semibold">blockchain applications</span>, and <span className="text-cyan-400 font-semibold">AI-powered products</span> that solve real-world problems.
-          </p>
-
-          <div className="mt-14 grid grid-cols-2 gap-6">
-
-            <StatCard number="9.35" label="CGPA" />
-            <StatCard number="20+" label="Projects" />
-            <StatCard number="10+" label="Hackathons" />
-            <StatCard number="6+" label="Leadership Roles" />
-
+            <p className="mt-5 leading-8 text-[#B9AC9A]">
+              "Lately I've been fascinated by how trust can be engineered—not
+              assumed. That's what pulled me toward Explainable AI, Blockchain
+              and Post-Quantum Cryptography."
+            </p>
           </div>
 
-        </motion.div>
+          <div className="rounded-3xl border border-white/10 bg-[#171222]/70 p-8">
+            <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#B88952]">
+              BUILD PHILOSOPHY
+            </p>
 
+            <ul className="mt-5 space-y-3 text-[#B9AC9A]">
+              <li>→ Learn deeply before building.</li>
+              <li>→ Keep experimenting publicly.</li>
+              <li>→ Design for people, not just demos.</li>
+              <li>→ Curiosity over perfection.</li>
+              <li>→ Whether you Win or lose, YOU ARE ALWAYS A WINNER.</li>
+            </ul>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
