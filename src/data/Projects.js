@@ -2,16 +2,16 @@ export const projects = [
   {
     id: 1,
     no: "01",
-    title: "Poseidon",
-    subtitle: "AI Powered Marine Waste Collection",
+    title: "NewsNexus",
+    subtitle: "AI Powered Marine Life Protection System",
 
     thumbnail: "/images/poseidon.png",
 
     question:
-      "Can an inexpensive autonomous system identify and collect floating waste from rivers?",
+      "Can an inexpensive autonomous system identify and alert ph change in deep oceans?",
 
     story:
-      "Poseidon began as a hackathon idea after exploring the growing problem of river pollution. I wanted to understand how computer vision, inexpensive sensors and embedded systems could work together to automate waste collection rather than relying entirely on manual cleaning.",
+      "Poseidon began as an EDI idea after exploring the growing problem of river pollution. I wanted to understand how computer vision,sensors and embedded systems could work together to automate the process rather than relying entirely on manual cleaning.",
 
     architecture: "/images/poseidon-architecture.png",
 
@@ -29,9 +29,13 @@ export const projects = [
       "Arduino",
       "IoT",
     ],
+    gallery:[
 
-    github: "#",
-    demo: "#",
+    ],
+
+    github :[
+
+    ],
   },
 
   {
@@ -64,9 +68,6 @@ export const projects = [
       "Pandas",
       "Scikit-Learn",
     ],
-
-    github: "#",
-    demo: "#",
   },
 
   {
@@ -78,7 +79,7 @@ export const projects = [
     thumbnail: "/images/netram.png",
 
     question:
-      "Can low-cost embedded devices assist in border surveillance using computer vision?",
+      "Can a embedded devices prevent border infiltration using computer vision?",
 
     story:
       "This project combines ESP32-CAM, Arduino and YOLO to detect human intrusion while remaining affordable enough for large deployments.",
@@ -98,8 +99,5 @@ export const projects = [
       "OpenCV",
       "Arduino",
     ],
-
-    github: "#",
-    demo: "#",
   },
 ];

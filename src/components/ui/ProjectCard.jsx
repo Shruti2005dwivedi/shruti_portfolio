@@ -38,7 +38,7 @@ export default function ProjectCard({ project, index }) {
 
       <div className="p-7">
 
-        <p className="font-mono text-xs uppercase tracking-[0.35em] text-violet-400">
+        <p className="font-mono text-xs uppercase tracking-[0.35em] text-amber-400">
           Experiment {(index + 1).toString().padStart(2, "0")}
         </p>
 
@@ -46,7 +46,7 @@ export default function ProjectCard({ project, index }) {
           {title}
         </h3>
 
-        <p className="mt-2 text-lg text-violet-300">
+        <p className="mt-2 text-lg text-amber-300">
           {subtitle}
         </p>
 
@@ -58,7 +58,7 @@ export default function ProjectCard({ project, index }) {
           href={github}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center gap-3 text-violet-300 transition hover:text-violet-200"
+          className="mt-8 inline-flex items-center gap-3 text-amber-300 transition hover:text-amber-200"
         >
           <FaGithub />
           View on GitHub →

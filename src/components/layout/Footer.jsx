@@ -24,7 +24,7 @@ export default function Footer() {
 
             <a
               href="mailto:dshruti593@gmail.com"
-              className="text-slate-500 transition hover:text-violet-400"
+              className="text-slate-500 transition hover:text-amber-400"
             >
               <MdEmail />
             </a>
@@ -32,7 +32,7 @@ export default function Footer() {
             <a
               href="https://github.com/Shruti2005dwivedi"
               target="_blank"
-              className="text-slate-500 transition hover:text-violet-400"
+              className="text-slate-500 transition hover:text-amber-400"
             >
               <FaGithub />
             </a>
@@ -40,7 +40,7 @@ export default function Footer() {
             <a
               href="https://www.linkedin.com/in/shruti-dwivedi-69aa39335"
               target="_blank"
-              className="text-slate-500 transition hover:text-violet-400"
+              className="text-slate-500 transition hover:text-amber-400"
             >
               <FaLinkedin />
             </a>

@@ -4,12 +4,13 @@ import { Link } from "react-scroll";
 import { personalInfo } from "../../data/portfolio";
 import BackgroundGlow from "../ui/BackgroundGlow";
 import shrutiImg from "../../assets/images/shruti.jpeg";
+
 export default function Hero() {
   return (
     <section
-      id="home"
-      className="mx-auto max-w-7xl px-8 py-14 md:px-20 md:py-16"
-    >
+  id="home"
+  className="mx-auto max-w-7xl px-8 pt-40 pb-14 md:px-20 md:pt-44 md:pb-16"
+>
       <BackgroundGlow />
 
       <div className="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-20">
@@ -21,48 +22,58 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-mono text-sm uppercase tracking-[0.4em] text-violet-400"
+            className="font-mono text-sm uppercase tracking-[0.4em] text-[#C49A6C]"
           >
             ENGINEERING JOURNAL • ISSUE 01
           </motion.p>
-
-          <p className="mt-5 text-sm tracking-wide text-slate-500">
-          AI & Data Science @ VIT Pune
-          </p>
-
           <motion.h1
-            initial={{ opacity: 0, y: 35 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15 }}
-            className="mt-8 text-5xl font-black leading-tight text-white lg:text-6xl xl:text-7xl"
-          >
-            Hi, I'm
-            <br />
+  initial={{ opacity: 0, y: 35 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.15 }}
+  className="mt-6 leading-none"
+>
+  <div className="text-5xl font-black text-[#F5E9D7] lg:text-6xl xl:text-7xl">
+    Meet...
+  </div>
 
-            <span className="bg-gradient-to-r from-violet-400 to-fuchsia-300 bg-clip-text text-transparent">
-              {personalInfo.name}
-            </span>
-          </motion.h1>
+  <span
+    className="
+      mt-2
+      block
+      font-['Cormorant_Garamond']
+      text-6xl
+      lg:text-7xl
+      xl:text-8xl
+      font-bold
+      leading-none
+      tracking-tight
+      bg-gradient-to-r
+      from-[#F7E8D2]
+      via-[#E2B97E]
+      to-[#B17C43]
+      bg-clip-text
+      text-transparent
+      drop-shadow-[0_4px_20px_rgba(215,176,122,0.25)]
+    "
+  >
+    {personalInfo.name}
+  </span>
+</motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.35 }}
-            className="mt-10 max-w-3xl text-xl leading-9 text-slate-400"
+            className="mt-10 max-w-3xl text-xl leading-9 text-[#C7B59B]"
           >
-            I enjoy building intelligent software where{" "}
-            <span className="font-semibold text-white">
-              Artificial Intelligence
+            I enjoy building intelligent solutions where{" "}
+            <span className="font-semibold text-[#F5E9D7]">
+              Humanity
             </span>{" "}
             meets{" "}
-            <span className="font-semibold text-white">
-              Blockchain
+            <span className="font-semibold text-[#F5E9D7]">
+              Artificial Intelligence !
             </span>
-            ,{" "}
-            <span className="font-semibold text-white">
-              Security
-            </span>{" "}
-            and real-world engineering challenges.
           </motion.p>
 
           <motion.div
@@ -71,11 +82,11 @@ export default function Hero() {
             transition={{ delay: 0.55 }}
             className="mt-12 flex flex-wrap items-center gap-4"
           >
-            <span className="font-medium text-slate-500">
-              Currently Exploring —
+            <span className="font-medium text-[#9E8E79]">
+              Currently Exploring : 
             </span>
 
-            <span className="text-xl font-semibold text-violet-300">
+            <span className="text-xl font-semibold text-[#D7B07A]">
               <TypeAnimation
                 sequence={[
                   "Explainable AI",
@@ -84,9 +95,7 @@ export default function Hero() {
                   2000,
                   "Blockchain",
                   2000,
-                  "Distributed Systems",
-                  2000,
-                  "Post-Quantum Cryptography",
+                  "System Design",
                   2000,
                 ]}
                 repeat={Infinity}
@@ -101,107 +110,253 @@ export default function Hero() {
             transition={{ delay: 0.75 }}
             className="mt-14 flex flex-wrap gap-5"
           >
-            <Link
-              to="projects"
-              smooth
-              duration={700}
-              className="cursor-pointer rounded-full px-8 py-4 font-semibold text-white transition hover:scale-105"
-              style={{
-                background:
-                  "linear-gradient(135deg,#A855F7,#C084FC)",
-              }}
-            >
-              View Experiments →
-            </Link>
+           <Link
+  to="projects"
+  smooth
+  duration={700}
+  className="
+    group
+    relative
+    overflow-hidden
+    cursor-pointer
+    border
+    border-[#B88952]/40
+    bg-[#2A211C]
+    px-9
+    py-4
+    font-semibold
+    tracking-wide
+    text-[#F4E7D5]
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:border-[#D8B07B]
+    hover:shadow-[0_10px_30px_rgba(184,137,82,.25)]
+  "
+  style={{
+    clipPath: "polygon(10% 0%,100% 0%,90% 100%,0% 100%)",
+  }}
+>
+  Featured Projects
+</Link>
 
             <a
-              href="/Shruti_Dwivedi_Resume.pdf"
-              download
-              className="rounded-full border border-white/10 bg-[#16111F] px-8 py-4 font-semibold text-slate-300 transition hover:border-violet-400 hover:text-white"
-            >
-              Resume ↓
-            </a>
+  href="/Shruti_Dwivedi_VITPune.pdf"
+  download
+  className="
+    group
+    relative
+    overflow-hidden
+    border
+    border-[#B88952]/40
+    bg-[#2A211C]
+    px-9
+    py-4
+    font-semibold
+    tracking-wide
+    text-[#F4E7D5]
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:border-[#D8B07B]
+    hover:shadow-[0_10px_30px_rgba(184,137,82,.25)]
+  "
+  style={{
+    clipPath: "polygon(10% 0%,100% 0%,90% 100%,0% 100%)",
+  }}
+>
+  Resume
+</a>
           </motion.div>
 
           <div className="mt-16 flex items-center gap-3">
 
-            <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse"></div>
+            <div className="h-2 w-2 rounded-full bg-[#B78C56] animate-pulse"></div>
 
-            <p className="text-sm text-slate-500">
+            <p className="text-sm text-[#9E8E79]">
               Currently building{" "}
-              <span className="text-white">
-                CreditSense AI
+              <span className="text-[#F5E9D7]">
+                CreditSense AI , Shopify based ecommerce platform, and many more !
               </span>
             </p>
 
           </div>
 
         </div>
-
         {/* RIGHT */}
 
         <div className="relative hidden lg:flex items-center justify-center">
 
           <div className="relative">
 
-            <div className="flex h-[430px] w-[430px] items-center justify-center overflow-hidden rounded-full border border-violet-500/20 bg-[#16111F]">
-
-              {/* Replace later with your image */}
-
-              {/* Photo */}
-
-<div className="flex h-[430px] w-[380px] overflow-hidden rounded-[32px] border border-violet-500/20 bg-[#16111F] shadow-xl">
-
-  <img
-  src={shrutiImg}
-  alt="Shruti Dwivedi"
-  className="h-full w-full object-cover"
-/>
-
-</div>
-
+            {/* Premium Image */}
+            <div
+              className="
+                overflow-hidden
+                rounded-[40px]
+                border
+                border-[#6E573D]/30
+                shadow-2xl
+                bg-[#231C18]
+              "
+            >
+              <img
+                src={shrutiImg}
+                alt="Shruti Dwivedi"
+                className="h-[560px] w-[420px] object-cover transition duration-500 hover:scale-105"
+              />
             </div>
 
-            <div className="absolute -right-8 top-10 rounded-3xl border border-violet-500/20 bg-[#16111F]/90 p-6 backdrop-blur-xl">
-
-              <p className="mb-4 text-xs uppercase tracking-[0.35em] text-violet-300">
-                CURRENT FOCUS
+            {/* Journal Annotation Card */}
+            <div
+              className="
+                absolute
+                -left-12
+                bottom-10
+                w-[330px]
+                rounded-3xl
+                border
+                border-[#6E573D]/40
+                bg-[#241D18]/95
+                p-6
+                backdrop-blur-xl
+                shadow-xl
+              "
+            >
+              {/* Heading */}
+              <p className="mb-4 font-mono text-xs uppercase tracking-[0.4em] text-[#C79A58]">
+                CURRENT #GOALS
               </p>
 
-              <ul className="space-y-3 text-slate-300">
+              {/* Dashed divider */}
+              <div className="mb-5 border-t border-dashed border-[#6E573D]/50"></div>
 
-                <li>AI Systems</li>
-
-                <li>CreditSense AI</li>
-
-                <li>System Design</li>
-
-                <li>Open Source</li>
-
+              {/* List */}
+              <ul className="space-y-4 text-lg text-[#E7D8C2]">
+                <li>- AI Systems</li>
+                <li>- Competitive Programming</li>
+                <li>- Open Source</li>
               </ul>
 
+              {/* Bottom dashed line */}
+              <div className="mt-6 border-t border-dashed border-[#6E573D]/50"></div>
             </div>
 
           </div>
 
-        </div>
+                </div>   {/* RIGHT */}
 
-      </div>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1 }}
-        className="mx-auto mt-20 flex max-w-7xl justify-end border-t border-white/10 pt-6"
-      >
-        <Link
-          to="projects"
-          smooth
-          duration={700}
-          className="cursor-pointer text-sm uppercase tracking-[0.35em] text-slate-500 transition hover:text-violet-300"
-        >
-          Explore My Work →
-        </Link>
-      </motion.div>
-    </section>
+      </div> {/* z-10 flex container */}
+
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: 1 }}
+  className="mx-auto mt-20 max-w-7xl border-t border-[#5B4633] pt-8"
+>
+  <div className="flex items-center justify-between gap-10">
+
+    {/* Left */}
+    <div className="flex flex-wrap items-center gap-3">
+
+      <span className="font-mono text-xs uppercase tracking-[0.4em] text-[#B88952]">
+        OFF engineering :
+      </span>
+      <div className="group relative inline-block cursor-pointer">
+
+  <a
+    href="/certificates/public-speaking.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+rounded-full
+border
+border-[#5B4633]
+px-3
+py-1
+text-xs
+uppercase
+tracking-wide
+text-[#B8A48A]
+transition-all
+duration-300
+hover:border-[#B88952]
+hover:text-[#F4E7D5]
+"
+  >
+    Public Speaker
+  </a>
+
+  {/* Hover Card */}
+  <div
+    className="
+absolute
+left-1/2
+top-full
+z-50
+mt-4
+w-72
+-translate-x-1/2
+rounded-2xl
+border
+border-[#6E573D]/40
+bg-[#231C18]/95
+p-5
+opacity-0
+invisible
+shadow-2xl
+backdrop-blur-xl
+transition-all
+duration-300
+group-hover:visible
+group-hover:translate-y-1
+group-hover:opacity-100
+"
+  >
+    <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#C79A58]">
+      View Experience 
+    </p>
+
+    <div className="my-3 border-t border-dashed border-[#6E573D]/50"></div>
+
+    <p className="text-sm text-[#D8C7B1]">
+      Hosted technical events,
+      delivered talks,
+      participated in public speaking sessions.
+    </p>
+  </div>
+
+</div>
+      {[
+  "Reader",
+  "Writer",
+  "Traveller",
+  "Problem Solver",
+].map((item) => (
+  <span
+    key={item}
+    className="rounded-full border border-[#5B4633] px-3 py-1 text-xs uppercase tracking-wide text-[#B8A48A] transition-all duration-300 hover:border-[#B88952] hover:text-[#F4E7D5]"
+  >
+    {item}
+  </span>
+))}
+
+</div> {/* closes left flex */}
+
+{/* Right */}
+<Link
+  to="projects"
+  smooth
+  duration={700}
+  className="cursor-pointer font-mono text-sm uppercase tracking-[0.35em] text-[#9E8E79] transition hover:text-[#D7B07A]"
+>
+  Explore My Work →
+</Link>
+
+</div> {/* justify-between */}
+
+</motion.div>
+
+</section>
   );
 }

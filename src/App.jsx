@@ -44,7 +44,6 @@ export default function App() {
       <Projects />
       <Leadership />
       <Contact />
-
       <BackToTop />
       <Footer />
     </>

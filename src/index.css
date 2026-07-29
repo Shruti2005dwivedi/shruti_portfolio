@@ -1,57 +1,62 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root{
-  --bg:#0B0713;
-  --card:#16111F;
+  --bg:#171311;
+  --card:#231C18;
 
-  --primary:#A855F7;
-  --primary-light:#C084FC;
+  --primary:#B78C56;
+  --primary-light:#D6B07A;
 
-  --text:#FFFFFF;
-  --muted:#B8B3C7;
+  --text:#F5E9D7;
+  --muted:#C9B79B;
 
-  --border:rgba(255,255,255,.08);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body{
-  background: linear-gradient(
-    135deg,
-    #15120E 0%,
-    #1B1713 45%,
-    #201A15 100%
-  );
-  color: #F2E9DA;
+  --border:rgba(212,186,150,.12);
 }
 
 html{
-  background:#15120E;
-}
-::selection{
-  background:#A855F7;
-  color:white;
+  scroll-behavior:smooth;
+  background:#171311;
 }
 
-* {
-  box-sizing: border-box;
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at top left,#3E2E23 0%,transparent 45%),
+    radial-gradient(circle at bottom right,#5A4331 0%,transparent 40%),
+    linear-gradient(
+      135deg,
+      #171311 0%,
+      #1D1714 45%,
+      #241C17 100%
+    );
+
+  color:var(--text);
+}
+
+::selection{
+  background:#B78C56;
+  color:#171311;
+}
+
+*{
+  box-sizing:border-box;
 }
 
 #root{
   min-height:100vh;
-  background:
-  radial-gradient(circle at top,#221433 0%,#0B0713 45%);
+  background:transparent;
 }
 
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
+.scrollbar-hide::-webkit-scrollbar{
+  display:none;
 }
 
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.scrollbar-hide{
+  -ms-overflow-style:none;
+  scrollbar-width:none;
+}
+.clip-fold{
+clip-path:polygon(100% 0,0 0,100% 100%);
 }

@@ -16,30 +16,31 @@ export default function Projects() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="font-mono text-sm uppercase tracking-[0.35em] text-violet-400"
+          className="font-mono text-sm uppercase tracking-[0.35em] text-[#C49A6C]"
         >
-          02 • SELECTED EXPERIMENTS
+          02 • SELECTED Projects
         </motion.p>
 
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-6 text-5xl font-black text-white md:text-6xl"
+          className="mt-5 text-5xl font-black text-[#F5E9D7] md:text-6xl"
         >
-          Selected Experiments
+          Selected Projects
         </motion.h2>
 
-        <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-400">
-          Every project began as a question. These are the experiments that
-          survived countless iterations, failures and late-night debugging
-          sessions.
+        <p className="mt-5 max-w-2xl text-lg leading-8 text-[#C7B59B]">
+          Every project began with a question. These Projects survived
+          countless iterations, failures and late-night debugging sessions.
         </p>
 
-        {/* Cards */}
+        {/* Journal Cards */}
 
-        <div className="mt-16 flex gap-7 overflow-x-auto pb-6 snap-x scrollbar-hide">
+        <div className="mt-14 flex gap-6 overflow-x-auto pb-6 snap-x scrollbar-hide">
+
           {projects.map((project) => (
+
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 40 }}
@@ -49,45 +50,64 @@ export default function Projects() {
               onClick={() => setSelectedProject(project)}
               className="
                 group
-                w-[320px]
-                h-[270px]
+                w-[300px]
+                h-[245px]
                 shrink-0
                 cursor-pointer
                 snap-start
-                rounded-[28px]
+                rounded-[24px]
                 border
-                border-white/10
-                bg-[#171222]/70
-                p-7
+                border-[#4A3B32]
+                bg-[#231C18]/90
+                p-6
                 backdrop-blur-xl
                 transition-all
                 duration-300
                 hover:-translate-y-2
-                hover:border-violet-400/40
-                hover:bg-[#1d1629]
+                hover:border-[#B78C56]
+                hover:shadow-[0_10px_35px_rgba(183,140,86,0.18)]
               "
             >
-              <p className="font-mono text-xs uppercase tracking-[0.3em] text-violet-300">
-                Experiment {project.no}
-              </p>
+              <div className="flex items-center justify-between">
 
-              <h3 className="mt-7 text-3xl font-bold text-white">
+                <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#C49A6C]">
+                  Experiment {project.no}
+                </p>
+
+                <span className="text-xs text-[#8E7D68]">
+                  {project.year}
+                </span>
+
+              </div>
+
+              <h3 className="mt-5 text-2xl font-bold text-[#F5E9D7]">
                 {project.title}
               </h3>
 
-              <p className="mt-3 text-sm text-slate-500">
+              <p className="mt-2 text-sm italic text-[#A79278]">
                 {project.subtitle}
               </p>
 
-              <p className="mt-5 leading-7 text-slate-400">
+              <p className="mt-5 line-clamp-3 leading-7 text-[#C7B59B]">
                 {project.question}
               </p>
 
-              <div className="mt-8 border-t border-white/10 pt-4 text-sm uppercase tracking-[0.2em] text-slate-500 transition group-hover:text-violet-300">
-                Open Journal →
+              <div className="mt-6 flex items-center justify-between border-t border-[#4A3B32] pt-4">
+
+                <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-[#8E7D68]">
+                  Journal Entry
+                </span>
+
+                <span className="text-sm font-medium text-[#C49A6C] transition group-hover:translate-x-1">
+                  Open →
+                </span>
+
               </div>
+
             </motion.div>
+
           ))}
+
         </div>
       </section>
 
