@@ -40,8 +40,8 @@ export default function App() {
       <Navbar />
 
       <Hero />
-      <About />
       <Projects />
+      <About />
       <Leadership />
       <Contact />
       <BackToTop />

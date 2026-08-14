@@ -14,6 +14,31 @@ export default function Hero() {
       <BackgroundGlow />
 
       <div className="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-20">
+        {/* Journal Lines */}
+<div
+  className="absolute inset-0 pointer-events-none opacity-[0.08]"
+  style={{
+    backgroundImage:
+      "repeating-linear-gradient(to bottom, transparent 0px, transparent 38px, rgba(255,245,220,.15) 39px)",
+  }}
+/>
+
+{/* Paper Texture */}
+<div
+  className="absolute inset-0 pointer-events-none opacity-[0.03]"
+  style={{
+    backgroundImage:
+      "radial-gradient(circle at 20% 20%, rgba(255,255,255,.35) 1px, transparent 1px)",
+    backgroundSize: "18px 18px",
+  }}
+/>
+      <div
+  className="absolute inset-0 opacity-[0.06] pointer-events-none"
+  style={{
+    backgroundImage:
+      "repeating-linear-gradient(to bottom, transparent px, transparent 39px, rgba(255,255,255,.5) 40px)",
+  }}
+/>
 
         {/* LEFT */}
 
@@ -68,7 +93,7 @@ export default function Hero() {
           >
             I enjoy building intelligent solutions where{" "}
             <span className="font-semibold text-[#F5E9D7]">
-              Humanity
+              #Humanity
             </span>{" "}
             meets{" "}
             <span className="font-semibold text-[#F5E9D7]">
@@ -105,71 +130,48 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.75 }}
-            className="mt-14 flex flex-wrap gap-5"
-          >
-           <Link
-  to="projects"
-  smooth
-  duration={700}
-  className="
-    group
-    relative
-    overflow-hidden
-    cursor-pointer
-    border
-    border-[#B88952]/40
-    bg-[#2A211C]
-    px-9
-    py-4
-    font-semibold
-    tracking-wide
-    text-[#F4E7D5]
-    transition-all
-    duration-300
-    hover:-translate-y-1
-    hover:border-[#D8B07B]
-    hover:shadow-[0_10px_30px_rgba(184,137,82,.25)]
-  "
-  style={{
-    clipPath: "polygon(10% 0%,100% 0%,90% 100%,0% 100%)",
-  }}
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.75 }}
+  className="mt-14"
 >
-  Featured Projects
-</Link>
+  <a
+    href="/Shruti_Dwivedi_VITPune.pdf"
+    download
+    className="
+      inline-flex
+      items-center
+      gap-3
+      group
+      relative
+      overflow-hidden
+      border
+      border-[#B88952]/40
+      bg-[#2A211C]
+      px-10
+      py-4
+      font-semibold
+      tracking-wide
+      text-[#F4E7D5]
+      transition-all
+      duration-300
+      hover:-translate-y-1
+      hover:border-[#D8B07B]
+      hover:shadow-[0_12px_35px_rgba(184,137,82,.25)]
+    "
+    style={{
+      clipPath: "polygon(10% 0%,100% 0%,90% 100%,0% 100%)",
+    }}
+  >
+    Resume
+    <span className="transition-transform duration-300 group-hover:translate-y-1">
+      
+    </span>
+  </a>
+</motion.div>
 
-            <a
-  href="/Shruti_Dwivedi_VITPune.pdf"
-  download
-  className="
-    group
-    relative
-    overflow-hidden
-    border
-    border-[#B88952]/40
-    bg-[#2A211C]
-    px-9
-    py-4
-    font-semibold
-    tracking-wide
-    text-[#F4E7D5]
-    transition-all
-    duration-300
-    hover:-translate-y-1
-    hover:border-[#D8B07B]
-    hover:shadow-[0_10px_30px_rgba(184,137,82,.25)]
-  "
-  style={{
-    clipPath: "polygon(10% 0%,100% 0%,90% 100%,0% 100%)",
-  }}
->
-  Resume
-</a>
-          </motion.div>
 
-          <div className="mt-16 flex items-center gap-3">
+          <div className="mt-8 flex items-center gap-3">
 
             <div className="h-2 w-2 rounded-full bg-[#B78C56] animate-pulse"></div>
 
@@ -190,28 +192,86 @@ export default function Hero() {
           <div className="relative">
 
             {/* Premium Image */}
-            <div
-              className="
-                overflow-hidden
-                rounded-[40px]
-                border
-                border-[#6E573D]/30
-                shadow-2xl
-                bg-[#231C18]
-              "
-            >
-              <img
-                src={shrutiImg}
-                alt="Shruti Dwivedi"
-                className="h-[560px] w-[420px] object-cover transition duration-500 hover:scale-105"
-              />
-            </div>
+<div
+  className="
+    relative
+    overflow-hidden
+    rounded-[40px]
+    border
+    border-[#A67C52]/40
+    bg-[#231C18]
+    shadow-[0_30px_70px_rgba(0,0,0,.45)]
+  "
+>
+
+  <img
+    src={shrutiImg}
+    alt="Shruti Dwivedi"
+    className="
+      h-[560px]
+      w-[420px]
+      object-cover
+      transition
+      duration-700
+      hover:scale-105
+      brightness-[.96]
+      contrast-[1.03]
+      saturate-[.95]
+    "
+  />
+
+  {/* Vintage Paper Overlay */}
+  <div
+    className="
+      absolute
+      inset-0
+      bg-gradient-to-b
+      from-white/10
+      via-transparent
+      to-[#6B4B2A]/10
+      pointer-events-none
+    "
+  />
+
+  {/* Film Grain */}
+  <div
+    className="
+      absolute
+      inset-0
+      opacity-[0.08]
+      mix-blend-overlay
+      pointer-events-none
+      bg-[url('/noise.png')]
+    "
+  />
+   
+
+  {/* Handwritten Journal Note */}
+  <div
+    className="
+      absolute
+      bottom-5
+      left-28
+      rotate-[-4deg]
+      rounded
+      bg-[#F6E8C8]
+      px-4
+      py-2
+      shadow-xl
+    "
+  >
+    <p className="font-['Caveat'] text-2xl text-[#51361E]">
+        @ NDA • 2025
+    </p>
+  </div>
+
+</div>
 
             {/* Journal Annotation Card */}
             <div
               className="
                 absolute
-                -left-12
+                -left-44
                 bottom-10
                 w-[330px]
                 rounded-3xl
@@ -223,6 +283,18 @@ export default function Hero() {
                 shadow-xl
               "
             >
+              <div
+className="
+absolute
+top-10
+right-6
+h-8
+w-8
+rotate-45
+bg-[#8B6A42]/20
+blur-sm
+"
+/>
               {/* Heading */}
               <p className="mb-4 font-mono text-xs uppercase tracking-[0.4em] text-[#C79A58]">
                 CURRENT #GOALS
@@ -252,12 +324,25 @@ export default function Hero() {
   initial={{ opacity: 0, y: 20 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ delay: 1 }}
-  className="mx-auto mt-20 max-w-7xl border-t border-[#5B4633] pt-8"
+  className="mx-auto mt-20 max-w-7xl pt-8"
 >
   <div className="flex items-center justify-between gap-10">
 
     {/* Left */}
-    <div className="flex flex-wrap items-center gap-3">
+    <div
+  className="
+  absolute
+  inset-0
+  pointer-events-none
+  opacity-[0.06]
+  "
+  style={{
+    backgroundImage:
+      "repeating-linear-gradient(to bottom, transparent 0px, transparent 38px, rgba(255,255,255,.12) 39px)"
+  }}
+/>
+
+    <div className="relative max-w-3xl">
 
       <span className="font-mono text-xs uppercase tracking-[0.4em] text-[#B88952]">
         OFF engineering :
@@ -327,11 +412,10 @@ group-hover:opacity-100
   </div>
 
 </div>
-      {[
-  "Reader",
-  "Writer",
-  "Traveller",
-  "Problem Solver",
+{[
+  "READER",
+  "TRAVELLER",
+  "WRITER",
 ].map((item) => (
   <span
     key={item}
@@ -341,19 +425,20 @@ group-hover:opacity-100
   </span>
 ))}
 
+<a
+  href="https://medium.com/@dshruti593"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-full border border-[#5B4633] px-3 py-1 text-xs uppercase tracking-wide text-[#B8A48A] transition-all duration-300 hover:border-[#B88952] hover:text-[#F4E7D5]"
+>
+  BLOGGER
+</a>
+
 </div> {/* closes left flex */}
 
-{/* Right */}
-<Link
-  to="projects"
-  smooth
-  duration={700}
-  className="cursor-pointer font-mono text-sm uppercase tracking-[0.35em] text-[#9E8E79] transition hover:text-[#D7B07A]"
->
-  Explore My Work →
-</Link>
-
-</div> {/* justify-between */}
+  <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-r from-transparent via-[#5B4633]/20 to-transparent blur-sm" />
+</div>
+<div className="mt-10 border-t border-dashed border-[#6E573D]/50"></div>
 
 </motion.div>
 
