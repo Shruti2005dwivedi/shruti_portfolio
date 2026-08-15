@@ -91,41 +91,39 @@ export default function Projects() {
 </div>
 
         <p className="mt-5 max-w-2xl text-lg leading-8 text-[#C7B59B]">
-          Every project began with a question. These projects survived
-          through ideation, failures and late-night debugging sessions.
+          " Every project began with a question. These projects survived
+          through ideation, failures and late-night debugging sessions. "
         </p>
 
         {/* Journal Cards */}
-        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+<div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
 
-          {projects.map((project) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              viewport={{ once: true }}
-              onClick={() => setSelectedProject(project)}
-              className="
-                group
-                relative
-                min-h-[300px]
-                w-full
-                cursor-pointer
-                rounded-[24px]
-                border
-                border-[#4A3B32]
-                bg-[#231C18]/90
-                p-7
-                backdrop-blur-xl
-                transition-all
-                duration-300
-                hover:-translate-y-2
-                hover:border-[#B78C56]
-                hover:bg-[#291F19]
-                hover:shadow-[0_15px_45px_rgba(183,140,86,0.18)]
-              "
-            >
+  {projects.map((project) => (
+    <motion.div
+      key={project.id}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      viewport={{ once: true }}
+      className="
+        group
+        relative
+        min-h-[300px]
+        w-full
+        rounded-[24px]
+        border
+        border-[#4A3B32]
+        bg-[#231C18]/90
+        p-7
+        backdrop-blur-xl
+        transition-all
+        duration-300
+        hover:-translate-y-2
+        hover:border-[#B78C56]
+        hover:bg-[#291F19]
+        hover:shadow-[0_15px_45px_rgba(183,140,86,0.18)]
+      "
+    >
               {/* Top Row */}
               <div className="flex items-center justify-between">
 
@@ -158,8 +156,8 @@ export default function Projects() {
               <div className="absolute bottom-7 left-7 right-7 flex items-center justify-between border-t border-[#4A3B32] pt-4">
 
                 <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-[#8E7D68]">
-                  Journal Entry
-                </span>
+  {project.year}
+</span>
 
                 <a
   href={project.github}

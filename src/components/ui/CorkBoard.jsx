@@ -154,7 +154,7 @@ shadow-xl
         />
 
         <p className="mt-4 text-center font-['Caveat'] text-2xl">
-          Shruti :)
+          Shruti :
         </p>
 
       </motion.div>

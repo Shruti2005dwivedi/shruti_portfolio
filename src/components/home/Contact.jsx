@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import polaroidImg from "../../assets/images/imagecontact.jpeg";
 
 export default function Contact() {
   return (
@@ -62,7 +63,7 @@ export default function Contact() {
           <div className="mt-8 border-t border-dashed border-[#6E573D]/50"></div>
 
           <p className="mt-5 text-right font-mono text-sm uppercase tracking-[0.35em] text-[#B88952]">
-            — Shruti Dwivedi
+            — Sierra_delta
           </p>
 
         </div>
@@ -95,7 +96,7 @@ export default function Contact() {
 
           <ul className="space-y-2 text-[#3A2413]">
 
-            <li>✓ Building AI Systems</li>
+            <li>✓ Public Speaking</li>
 
             <li>✓ Open to Collaboration</li>
 
@@ -120,7 +121,7 @@ export default function Contact() {
       >
 
         <a
-          href="dshruti593@gmail.com"
+          href="mailto:dshruti593@gmail.com"
           className="flex items-center gap-3 rounded-full border border-[#5B4633] bg-[#221A16] px-7 py-4 text-[#E9DCC8] transition-all duration-300 hover:-translate-y-1 hover:border-[#B88952]"
         >
           <FaEnvelope />
@@ -148,7 +149,49 @@ export default function Contact() {
         </a>
 
       </motion.div>
+{/* Final Page — small journal polaroid */}
+<motion.div
+  initial={{ opacity: 0, y: 20, rotate: 4 }}
+  whileInView={{ opacity: 1, y: 0, rotate: 4 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  className="
+    absolute
+    bottom-8
+    right-28
+    hidden
+    lg:block
+    w-[165px]
+    rotate-[4deg]
+    bg-[#F4E8CF]
+    p-3
+    pb-4
+    shadow-[0_15px_35px_rgba(0,0,0,.28)]
+  "
+>
+  <img
+    src={polaroidImg}
+    alt="Shruti"
+    className="
+      h-[120px]
+      w-full
+      object-cover
+    "
+  />
 
+  <p
+    className="
+      mt-3
+      text-center
+      font-['Caveat']
+      text-xl
+      leading-none
+      text-[#4E3524]
+    "
+  >
+    still figuring it out. ✦
+  </p>
+</motion.div>
       {/* Footer */}
 
       <motion.div

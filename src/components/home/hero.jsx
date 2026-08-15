@@ -169,154 +169,186 @@ export default function Hero() {
     </span>
   </a>
 </motion.div>
+</div>
 
+         
 
-          <div className="mt-8 flex items-center gap-3">
+        {/* RIGHT — PHOTO + JOURNAL GOALS */}
+<div className="relative hidden lg:flex w-[420px] shrink-0 items-center justify-center">
 
-            <div className="h-2 w-2 rounded-full bg-[#B78C56] animate-pulse"></div>
+  {/* PHOTO WRAPPER — this is the positioning parent */}
+  <div className="relative w-[420px]">
 
-            <p className="text-sm text-[#9E8E79]">
-              Currently building{" "}
-              <span className="text-[#F5E9D7]">
-                CreditSense AI , Shopify based ecommerce platform, and many more !
-              </span>
-            </p>
+    {/* PHOTO */}
+    <div
+      className="
+        relative
+        h-[560px]
+        w-[420px]
+        overflow-hidden
+        rounded-[40px]
+        border
+        border-[#A67C52]/40
+        bg-[#231C18]
+        shadow-[0_30px_70px_rgba(0,0,0,.45)]
+      "
+    >
 
-          </div>
+      <img
+        src={shrutiImg}
+        alt="Shruti Dwivedi"
+        className="
+          h-full
+          w-full
+          object-cover
+          transition
+          duration-700
+          hover:scale-105
+          brightness-[.96]
+          contrast-[1.03]
+          saturate-[.95]
+        "
+      />
 
-        </div>
-        {/* RIGHT */}
+      {/* Vintage overlay */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          bg-gradient-to-b
+          from-white/10
+          via-transparent
+          to-[#6B4B2A]/10
+        "
+      />
 
-        <div className="relative hidden lg:flex items-center justify-center">
+      {/* Film grain */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          opacity-[0.08]
+          mix-blend-overlay
+          bg-[url('/noise.png')]
+        "
+      />
 
-          <div className="relative">
+      {/* Photo caption */}
+      <div
+        className="
+          absolute
+          bottom-5
+          left-1/2
+          -translate-x-1/2
+          rotate-[-4deg]
+          rounded-[4px]
+          bg-[#F6E8C8]
+          px-5
+          py-2
+          shadow-xl
+          whitespace-nowrap
+        "
+      >
+        <p className="font-['Caveat'] text-2xl text-[#51361E]">
+          @ NDA • 2025
+        </p>
+      </div>
+    </div>
 
-            {/* Premium Image */}
-<div
+    {/* ============================= */}
+    {/* CURRENT GOALS — JOURNAL PAPER */}
+    {/* ============================= */}
+
+    <motion.div
+      initial={{ opacity: 0, x: -15, y: 10 }}
+      animate={{ opacity: 1, x: 0, y: 0 }}
+      transition={{ duration: 0.7, delay: 0.3 }}
+      className="
+  absolute
+  -left-20
+  top-[48%]
+  z-30
+  w-[260px]
+  bg-[#E9D7B8]
+  px-5
+  pb-5
+  pt-4
+  text-[#49372A]
+  shadow-[0_18px_40px_rgba(0,0,0,0.3)]
+  rotate-[-2deg]
+"
+      style={{
+        clipPath:
+          "polygon(0% 0%,100% 0%,100% 93%,95% 97%,90% 94%,85% 98%,80% 95%,75% 99%,70% 95%,65% 98%,60% 94%,55% 98%,50% 95%,45% 99%,40% 95%,35% 98%,30% 94%,25% 98%,20% 95%,15% 99%,10% 95%,5% 98%,0% 93%)",
+      }}
+    >
+
+      {/* Tape */}
+      <div
+        className="
+          absolute
+          -top-3
+          left-1/2
+          h-6
+          w-24
+          -translate-x-1/2
+          rotate-[-2deg]
+          bg-[#D8C49E]/70
+        "
+      />
+
+      {/* Heading */}
+      <p
+        className="
+          font-mono
+          text-[10px]
+          uppercase
+          tracking-[0.35em]
+          text-[#806344]
+        "
+      >
+        CURRENT #GOALS
+      </p>
+
+      {/* Dashed divider */}
+     <div className="mt-3 border-t border-dashed border-[#806344]/35 pt-3">
+  <div className="space-y-2">
+
+    <p className="text-[14px] leading-5">
+      – AI Systems
+    </p>
+
+    <p className="text-[14px] leading-5">
+      – Competitive Programming
+    </p>
+
+    <p className="text-[14px] leading-5">
+      – Open Source
+    </p>
+
+  </div>
+</div>
+
+      {/* Handwritten footer */}
+     <p
   className="
-    relative
-    overflow-hidden
-    rounded-[40px]
-    border
-    border-[#A67C52]/40
-    bg-[#231C18]
-    shadow-[0_30px_70px_rgba(0,0,0,.45)]
+    mt-3
+    text-right
+    font-['Caveat']
+    text-sm
+    text-[#76583D]
   "
 >
+  things I’m chasing ✦
+</p>
 
-  <img
-    src={shrutiImg}
-    alt="Shruti Dwivedi"
-    className="
-      h-[560px]
-      w-[420px]
-      object-cover
-      transition
-      duration-700
-      hover:scale-105
-      brightness-[.96]
-      contrast-[1.03]
-      saturate-[.95]
-    "
-  />
+    </motion.div>
 
-  {/* Vintage Paper Overlay */}
-  <div
-    className="
-      absolute
-      inset-0
-      bg-gradient-to-b
-      from-white/10
-      via-transparent
-      to-[#6B4B2A]/10
-      pointer-events-none
-    "
-  />
-
-  {/* Film Grain */}
-  <div
-    className="
-      absolute
-      inset-0
-      opacity-[0.08]
-      mix-blend-overlay
-      pointer-events-none
-      bg-[url('/noise.png')]
-    "
-  />
-   
-
-  {/* Handwritten Journal Note */}
-  <div
-    className="
-      absolute
-      bottom-5
-      left-28
-      rotate-[-4deg]
-      rounded
-      bg-[#F6E8C8]
-      px-4
-      py-2
-      shadow-xl
-    "
-  >
-    <p className="font-['Caveat'] text-2xl text-[#51361E]">
-        @ NDA • 2025
-    </p>
   </div>
 
 </div>
-
-            {/* Journal Annotation Card */}
-            <div
-              className="
-                absolute
-                -left-44
-                bottom-10
-                w-[330px]
-                rounded-3xl
-                border
-                border-[#6E573D]/40
-                bg-[#241D18]/95
-                p-6
-                backdrop-blur-xl
-                shadow-xl
-              "
-            >
-              <div
-className="
-absolute
-top-10
-right-6
-h-8
-w-8
-rotate-45
-bg-[#8B6A42]/20
-blur-sm
-"
-/>
-              {/* Heading */}
-              <p className="mb-4 font-mono text-xs uppercase tracking-[0.4em] text-[#C79A58]">
-                CURRENT #GOALS
-              </p>
-
-              {/* Dashed divider */}
-              <div className="mb-5 border-t border-dashed border-[#6E573D]/50"></div>
-
-              {/* List */}
-              <ul className="space-y-4 text-lg text-[#E7D8C2]">
-                <li>- AI Systems</li>
-                <li>- Competitive Programming</li>
-                <li>- Open Source</li>
-              </ul>
-
-              {/* Bottom dashed line */}
-              <div className="mt-6 border-t border-dashed border-[#6E573D]/50"></div>
-            </div>
-
-          </div>
-
-                </div>   {/* RIGHT */}
 
       </div> {/* z-10 flex container */}
 
@@ -350,7 +382,7 @@ blur-sm
       <div className="group relative inline-block cursor-pointer">
 
   <a
-    href="/certificates/public-speaking.pdf"
+    href="/Certificates/Shruti Dwivedi.pdf"
     target="_blank"
     rel="noopener noreferrer"
     className="
