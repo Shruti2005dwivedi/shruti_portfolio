@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import ProjectModal from "../ui/ProjectModal";
-import { projects } from "../../data/projects";
+import { projects } from "../../data/Projects";
 import journalPhoto from "../../assets/images/02.jpeg";
 
 export default function Projects() {

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-scroll";
-import { personalInfo } from "../../data/portfolio";
+import { personalInfo } from "../../data/Portfolio";
 import BackgroundGlow from "../ui/BackgroundGlow";
 import shrutiImg from "../../assets/images/shruti.jpeg";
 

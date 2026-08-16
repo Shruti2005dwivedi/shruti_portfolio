@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { journey } from "../../data/journey";
+import { journey } from "../../data/Journey";
 
 const categories = [
   {
